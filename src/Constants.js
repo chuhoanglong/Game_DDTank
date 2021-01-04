@@ -13,6 +13,12 @@ const randomColor = () => {
     return colors[index];
 }
 
+const randomRotate = () => {
+    const index = Math.floor(Math.random() * 13 / 4);
+    const colors = ['0deg', '90deg', '180deg', '270deg'];
+    return colors[index];
+}
+
 const playSound = async (type) => {
     let soundFile = null;
     switch (type) {
@@ -52,10 +58,11 @@ const playSound = async (type) => {
 export default constants = {
     MAX_WIDTH: width,
     MAX_HEIGHT: height,
-    GRID_SIZE: 30,
-    BULLET_SIZE: 10,
+    GRID_SIZE: 40,
+    BULLET_SIZE: 30,
     CELL_SIZE: 20,
     ENEMY_SIZE: 40,
+    randomRotate,
     randomEnemy,
     randomColor,
     playSound,

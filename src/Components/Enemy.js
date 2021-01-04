@@ -7,7 +7,7 @@ export default class Enemy extends Component {
         const { x, y } = this.props.position;
         const {
             size,
-            rotate,
+            rotate = 0,
             isLiving,
         } = this.props;
         return (
@@ -20,7 +20,7 @@ export default class Enemy extends Component {
                         left: x * size,
                         width: size,
                         height: size,
-                        transform: [{ rotate: `${rotate}deg` }]
+                        transform: [{ rotate: 0 + 'deg' }]
                     }}
                     resizeMode={'contain'}
                 />

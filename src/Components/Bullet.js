@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
 
 export default class Bullet extends Component {
     render() {
         const x = this.props.position.x;
         const y = this.props.position.y;
         const size = this.props.size;
-        const color = this.props.color;
         return (
-            <View
+            <Image
                 style={{
                     position: 'absolute',
-                    top: y * size + 10,
-                    left: x * size + 10,
+                    top: y * size + 5,
+                    left: x * size + 5,
                     width: size,
                     height: size,
-                    backgroundColor: color,
                     zIndex: -1,
-                    borderRadius: size,
                 }}
+                source={require('../assets/bullet.png')}
+                resizeMode={'contain'}
             />
         );
     }
