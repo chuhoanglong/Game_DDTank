@@ -1,8 +1,11 @@
 import { Dimensions } from 'react-native';
 import Sound from 'react-native-sound';
 
-const { width, height } = Dimensions.get('screen');
-
+const width = 667;
+const height = 375
+const GRID_SIZE = 50;
+const SPEED = 0.05;
+const BULLET_SIZE = 40;
 const randomEnemy = (max, min) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -58,10 +61,10 @@ const playSound = async (type) => {
 export default constants = {
     MAX_WIDTH: width,
     MAX_HEIGHT: height,
-    GRID_SIZE: 40,
-    BULLET_SIZE: 30,
-    CELL_SIZE: 20,
-    ENEMY_SIZE: 40,
+    GRID_SIZE,
+    BULLET_SIZE,
+    ENEMY_SIZE: GRID_SIZE,
+    SPEED,
     randomRotate,
     randomEnemy,
     randomColor,

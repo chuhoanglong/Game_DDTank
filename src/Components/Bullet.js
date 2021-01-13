@@ -6,15 +6,17 @@ export default class Bullet extends Component {
         const x = this.props.position.x;
         const y = this.props.position.y;
         const size = this.props.size;
+        const display = this.props.display;
         return (
             <Image
                 style={{
                     position: 'absolute',
-                    top: y * size + 5,
-                    left: x * size + 5,
+                    top: y * size,
+                    left: x * size,
                     width: size,
                     height: size,
                     zIndex: -1,
+                    display: display ? null : 'none'
                 }}
                 source={require('../assets/bullet.png')}
                 resizeMode={'contain'}

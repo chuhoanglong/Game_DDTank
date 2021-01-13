@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { View, Image } from 'react-native';
+import { Image } from 'react-native';
 
 export default class Enemy extends Component {
 
     render() {
-        const { x, y } = this.props.position;
+        const { x, y } = this.props.body.position;
         const {
             size,
             rotate = 0,
@@ -16,11 +16,12 @@ export default class Enemy extends Component {
                     source={require('../assets/enemy.png')}
                     style={{
                         position: 'absolute',
-                        top: y * size,
                         left: x * size,
+                        top: y * size,
                         width: size,
                         height: size,
-                        transform: [{ rotate: 0 + 'deg' }]
+                        alignItems: 'center',
+                        transform: [{ rotate: rotate + 'deg' }]
                     }}
                     resizeMode={'contain'}
                 />
