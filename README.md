@@ -16,3 +16,5 @@ step4: yarn install
 step5: yarn start
 
 step6: mở android studio lên để run app.
+
+thay thế file react-native-game-pad trong thư mục node_modules bằng file react-native-game-pad bên ngoài index.js
