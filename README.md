@@ -1,8 +1,10 @@
 # Game_DDTank
 máy cần cài đặt môi trường React Native để có thể run app.
+
 https://reactnative.dev/docs/environment-setup
 
 sau đó thực hiện theo các bước sau.
+
 step1: git clone https://github.com/chuhoanglong/Game_DDTank.git
 
 step2: cd Game_DDTank
