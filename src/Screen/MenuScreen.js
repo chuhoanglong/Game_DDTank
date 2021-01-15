@@ -5,7 +5,8 @@ import {
     StyleSheet,
     TouchableOpacity,
     BackHandler,
-    Alert
+    Alert,
+    StatusBar
 } from "react-native";
 
 export default class MenuScreen extends Component {
@@ -45,6 +46,7 @@ export default class MenuScreen extends Component {
     render() {
         return (
             <View style={styles.contain}>
+                <StatusBar hidden translucent={true} />
                 <Text style={styles.styTitle}>DDTank</Text>
                 <View style={{ height: 50 }} />
                 <View>

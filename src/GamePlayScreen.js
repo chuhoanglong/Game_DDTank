@@ -359,7 +359,7 @@ export default class App extends Component {
         const { running } = this.state;
         return (
             <View style={styles.contain}>
-                <StatusBar hidden />
+                <StatusBar hidden translucent={true} />
                 <SafeAreaView style={{ flex: 1 }}>
                     <GameEngine
                         ref={ref => this.refGameEngine = ref}
